@@ -32,5 +32,5 @@ tinytex::tlmgr_install(c('babel-russian', 'cyrillic', 'cm-super',
 
 5. Ставим небольшую подборку русскоязычных Rmd-шаблонов
 ```{r, eval=FALSE}
-devtools::install_github('bdemeshev/azbuka)
+devtools::install_github('bdemeshev/azbuka')
 ```
