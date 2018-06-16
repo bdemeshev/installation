@@ -1,0 +1,36 @@
+---
+title: "Установка tinytex"
+date: "Июнь 16, 2018"
+output: html_document
+---
+
+Если есть возможность, то лучше поставить полный дистрибутив Латеха, например, texlive.
+
+Однако бывают ситуации, когда тех нужно поставить, а ни времени, ни достаточного объёма жесткого диска нет.
+
+Поехали!
+
+1. Ставим из Rstudio пакет `tinytex`.
+```{r, eval=FALSE}
+install.packages('tinytex')
+```
+
+2. Ставим самую минимальную версию TinyTex:
+```{r, eval=FALSE}
+tinytex::install_tinytex()
+```
+
+Под windows во время инсталляции может появляться окно с предупреждением, что не хватает файла `lualatex.dll`, ничего страшного. Смело жмём ок и продолжаем.
+
+3. Перезапускаем Rstudio.
+
+4. Ставим дополнительные пакеты Latex для русского языка
+```{r, eval=FALSE}
+tinytex::tlmgr_install(c('babel-russian', 'cyrillic', 'cm-super', 
+                         'lh', 'makecmds', 'polyglossia', 'ulem'))
+```
+
+5. Ставим небольшую подборку русскоязычных Rmd-шаблонов
+```{r, eval=FALSE}
+devtools::install_github('bdemeshev/azbuka)
+```

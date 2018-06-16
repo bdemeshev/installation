@@ -7,3 +7,4 @@ lang: ru-RU
 
 * Боекомплект [R + Rstudio](http://bdemeshev.github.io/installation/r/R_installation.html)
 * [stan / rstan](http://bdemeshev.github.io/installation/r_stan/r_stan_installation.html)
+* Дистрибутив теха [Tinytex](http://bdemeshev.github.io/installation/tinytex/tinytex.html)
