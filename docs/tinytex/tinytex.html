@@ -137,10 +137,12 @@ $(document).ready(function () {
 <p>Под windows во время инсталляции может появляться окно с предупреждением, что не хватает файла <code>lualatex.dll</code>, ничего страшного. Смело жмём ок и продолжаем.</p>
 <ol start="3" style="list-style-type: decimal">
 <li><p>Перезапускаем Rstudio.</p></li>
-<li><p>Ставим дополнительные пакеты Latex для русского языка</p></li>
+<li><p>Ставим дополнительные пакеты Latex для русского языка и типичного Rmd-файла</p></li>
 </ol>
-<pre class="r"><code>tinytex::tlmgr_install(c('babel-russian', 'cyrillic', 'cm-super', 
-                         'lh', 'makecmds', 'polyglossia', 'ulem'))</code></pre>
+<pre class="r"><code>popular_packs &lt;- c('babel-russian', 'cyrillic', 'cm-super',
+                    'lh', 'makecmds', 'polyglossia', 'ulem',
+                    'siunitx', 'multirow', 'xcolor', 'colortbl')
+tinytex::tlmgr_install(popular_packs)</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Ставим небольшую подборку русскоязычных Rmd-шаблонов</li>
 </ol>

@@ -24,10 +24,12 @@ tinytex::install_tinytex()
 
 3. Перезапускаем Rstudio.
 
-4. Ставим дополнительные пакеты Latex для русского языка
+4. Ставим дополнительные пакеты Latex для русского языка и типичного Rmd-файла
 ```{r, eval=FALSE}
-tinytex::tlmgr_install(c('babel-russian', 'cyrillic', 'cm-super', 
-                         'lh', 'makecmds', 'polyglossia', 'ulem'))
+popular_packs <- c('babel-russian', 'cyrillic', 'cm-super',
+                    'lh', 'makecmds', 'polyglossia', 'ulem',
+                    'siunitx', 'multirow', 'xcolor', 'colortbl')
+tinytex::tlmgr_install(popular_packs)
 ```
 
 5. Ставим небольшую подборку русскоязычных Rmd-шаблонов
