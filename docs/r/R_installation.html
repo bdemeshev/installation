@@ -90,6 +90,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -167,29 +170,32 @@ $(document).ready(function () {
 
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Установите все необходимые для курса пакеты R.</li>
-</ol>
-<p>Скачайте файл <a href="https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R">install_all.R</a>. Откройте его в RStudio (<code>File</code> — <code>Open file</code>). Запустите, выбрав <code>Code</code> — <code>Source with Echo</code>. При этом требуется соединение с Интернетом. Бегущие красные надписи не означают ошибок, признаком ошибки является только явное сообщение Error.</p>
-<ol start="7" style="list-style-type: decimal">
 <li>Шаг только для Windows. Установите свежую версию <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>.</li>
 </ol>
 <p>Это дополнительные программы, которые позволяют нам, в частности, из R создавать экселевские файлы.</p>
-<ol start="8" style="list-style-type: decimal">
-<li><p>Не забудьте включить обратно антивирус :)</p></li>
-<li><p>Шаг только для Macos. Выполните из Rstudio команду</p></li>
+<ol start="7" style="list-style-type: decimal">
+<li>Шаг только для Macos. Выполните из Rstudio команду</li>
 </ol>
 <pre class="r"><code>system(&quot;defaults write org.R-project.R force.LANG en_US.UTF-8&quot;)</code></pre>
 <p>Это позволит избежать потенциальных проблем с изображением кириллицы на компьютерах, где не срабатывает автоматическое определение настроек.</p>
-<ol start="10" style="list-style-type: decimal">
+<ol start="8" style="list-style-type: decimal">
 <li>Шаг только для windows. Если имя пользователя windows набрано русскими буквами, а создавать нового никак не хочется!</li>
 </ol>
-<p>10.1. Создайте папку для установки пакетов без русских букв и пробелов, например, <code>C:/Rlib</code>.</p>
-<p>10.2. Выполните в консоли Rstudio команду</p>
+<p>8.1. Создайте папку для установки пакетов без русских букв и пробелов, например, <code>C:/Rlib</code>.</p>
+<p>8.2. Выполните в консоли Rstudio команду</p>
 <pre class="r"><code>system(&quot;setx R_LIBS C:/Rlib&quot;)</code></pre>
 <p>Вместо <code>C:/Rlib</code> должно быть имя папки созданной для установки пакетов.</p>
-<p>10.3. Проверьте, что R знает, куда ему ставить пакеты. Для этого выполните в консоли Rstudio команду</p>
+<p>8.3. Перезапустите Rstudio</p>
+<p>8.4. Проверьте, что R знает, куда ему ставить пакеты. Для этого выполните в консоли Rstudio команду</p>
 <pre class="r"><code>.libPaths()</code></pre>
 <p>Она должна указать путь к папке <code>C:/Rlib</code>. После этого все пакеты будут ставиться в папку <code>C:/Rlib</code>.</p>
+<ol start="9" style="list-style-type: decimal">
+<li>Установите все необходимые для курса пакеты R.</li>
+</ol>
+<p>Скачайте файл <a href="https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R">install_all.R</a>. Откройте его в RStudio (<code>File</code> — <code>Open file</code>). Запустите, выбрав <code>Code</code> — <code>Source with Echo</code>. При этом требуется соединение с Интернетом. Бегущие красные надписи не означают ошибок, признаком ошибки является только явное сообщение Error.</p>
+<ol start="10" style="list-style-type: decimal">
+<li>Не забудьте включить обратно антивирус :)</li>
+</ol>
 </div>
 <div id="---linux" class="section level1">
 <h1>Несколько комментариев для linux</h1>
