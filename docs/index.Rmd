@@ -6,5 +6,6 @@ lang: ru-RU
 ---
 
 * Боекомплект [R + Rstudio](http://bdemeshev.github.io/installation/r/R_installation.html)
-* [stan / rstan](http://bdemeshev.github.io/installation/r_stan/r_stan_installation.html)
-* Дистрибутив теха [Tinytex](http://bdemeshev.github.io/installation/tinytex/tinytex.html)
+* Вероятностное программирование на [stan / rstan](http://bdemeshev.github.io/installation/r_stan/r_stan_installation.html)
+* Дистрибутив теха [tinytex](http://bdemeshev.github.io/installation/tinytex/tinytex.html)
+* Текстовый редактор [neovim](http://bdemeshev.github.io/installation/neovim.html)

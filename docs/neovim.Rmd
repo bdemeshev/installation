@@ -1,0 +1,48 @@
+---
+title: "VIM"
+author: "Винни-Пух"
+date: "August 21, 2018"
+output: html_document
+---
+
+# Linux
+
+1. Устанавливаем, как указано на [страничке neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu) 
+
+
+```{bash, eval=FALSE}
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+sudo apt-get install python-dev python-pip python3-dev python3-pip
+```
+
+Настраиваем, чтобы `neovim` вызывался как редактор по умолчанию:
+
+```{bash, eval=FALSE}
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
+sudo update-alternatives --config vi
+sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
+sudo update-alternatives --config vim
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
+sudo update-alternatives --config editor
+```
+
+
+
+2. Создаём файл `~/.config/nvim/init.vim`. В интернете этих файлов настроек можно найти кучи. 
+Мало кто комментирует, что означает та, или иная строчка,
+а копировать не понимая скучновато.
+
+Комментированный [`init.vim`](https://github.com/bdemeshev/installation/raw/master/init.vim)
+
+
+3. Запускаем vim и обновляем все плагины нажимая `:PlugUpdate`.
+
+4. Проходим небольшой тренинг прямо внутри vim, `:Tutor` или справку `:help`.
+
+5. Мучительно карабкаемся по вертикальной кривой обучения :) В интернете полно учебников и курсов. Например, [раз](https://thoughtbot.com/upcase/vim), [два](https://vim-adventures.com/), [три](https://medium.com/actualize-network/how-to-learn-vim-a-four-week-plan-cd8b376a9b85).
+
+
+# Macos
