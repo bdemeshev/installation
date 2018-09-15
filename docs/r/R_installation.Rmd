@@ -6,6 +6,8 @@ output:
     toc: yes
     toc_depth: 1
 lang: ru-RU
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Пошаговая установка R для windows
@@ -89,11 +91,20 @@ system("setx R_LIBS C:/Rlib")
 
 8. Установите все необходимые для курса пакеты R.
 
-На вопрос "Install package from source?" следует ответить "Нет"!
-
 Скачайте файл [install_all.R](https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R).
 Откройте его в RStudio (`File` --- `Open file`). Запустите, выбрав `Code` --- `Source with Echo`.
 При этом требуется соединение с Интернетом.
+
+При установке может встретиться вопрос: "Do you want to install from sources the packages which need compilation?" 
+
+![](source_question.png)
+
+Следует ответить "Нет"! 
+
+Причина: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты. 
+
+
+
 Бегущие красные надписи не означают ошибок, признаком ошибки является только явное сообщение Error.
 
 9. Не забудьте включить обратно антивирус :)
@@ -149,11 +160,21 @@ system("defaults write org.R-project.R force.LANG en_US.UTF-8")
 
 5. Установите все необходимые для курса пакеты R.
 
-На вопрос "Install package from source?" следует ответить "Нет"!
+
 
 Скачайте файл [install_all.R](https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R).
 Откройте его в RStudio (`File` --- `Open file`). Запустите, выбрав `Code` --- `Source with Echo`.
 При этом требуется соединение с Интернетом.
+
+При установке может встретиться вопрос: "Do you want to install from sources the packages which need compilation?" 
+
+![](source_question.png)
+
+Следует ответить "Нет"! 
+
+Причина: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты. 
+
+
 Бегущие красные надписи не означают ошибок, признаком ошибки является только явное сообщение Error.
 
 
