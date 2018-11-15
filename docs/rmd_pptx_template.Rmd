@@ -1,0 +1,11 @@
+---
+title: "Инструкции по установке"
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
+output: html_document
+lang: ru-RU
+---
+
+* Боекомплект [R + Rstudio](http://bdemeshev.github.io/installation/r/R_installation.html)
+* Вероятностное программирование на [stan / rstan](http://bdemeshev.github.io/installation/r_stan/r_stan_installation.html)
+* Дистрибутив теха [tinytex](http://bdemeshev.github.io/installation/tinytex/tinytex.html)
+* Текстовый редактор [neovim](http://bdemeshev.github.io/installation/neovim.html)
