@@ -1,11 +1,13 @@
 ---
-title: "Инструкции по установке"
+title: "Rmd в pptx"
 date: "`r format(Sys.time(), '%d.%m.%Y')`"
 output: html_document
 lang: ru-RU
 ---
 
-* Боекомплект [R + Rstudio](http://bdemeshev.github.io/installation/r/R_installation.html)
-* Вероятностное программирование на [stan / rstan](http://bdemeshev.github.io/installation/r_stan/r_stan_installation.html)
-* Дистрибутив теха [tinytex](http://bdemeshev.github.io/installation/tinytex/tinytex.html)
-* Текстовый редактор [neovim](http://bdemeshev.github.io/installation/neovim.html)
+Вышкинская студия OneButton (и не только она) требует pptx-слайды.
+
+1. Качаем [pptx-шаблон](https://github.com/bdemeshev/installation/raw/master/rmd_pptx_hse_template/scorm_hse_template_alpha.pptx).
+2. Качаем [Rmd-демку](https://github.com/bdemeshev/installation/raw/master/rmd_pptx_hse_template/pptx_slides_scorm_hse_demo.Rmd).
+3. Профит!
+
