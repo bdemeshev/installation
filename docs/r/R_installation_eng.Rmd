@@ -1,12 +1,12 @@
 ---
 title: "Installation of R+Rstudio under windows and macos"
 date: "1 October 2018"
-output: 
-  html_document: 
+output:
+  html_document:
     toc: yes
     toc_depth: 1
 lang: en-GB
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -26,7 +26,8 @@ editor_options:
 
 2. Disable antivirus temporary for the setup procedure.
 
-Нет, мы не хотим подсунуть слушателям хитрый троянский вирус :) Просто встречались с проблемами при установке, если антивирус включён.
+No, we don't want to instal a virus on your computer :)
+Just we have encountered some problems during installation if anti-virus is active.
 
 3. Install classic R for [windows](https://cran.r-project.org/bin/windows/base/).
 
@@ -38,12 +39,12 @@ editor_options:
 4. Install [RStudio](https://www.rstudio.com/products/rstudio/download/#download).
 
 Rstudio — is just a pretty graphical interface to R.
-Суровые брутальные программисты могут вполне обойтись и без Rstudio :)
+Brutal programmers may avoid Rstudio and use neovim or emacs :)
 Do not confuse Rstudio and R-studio, which is a non-free program for data recovery.
 
 5. Configure Rstudio.
 
-Launch RStudio. Go to Tools --- Global options.
+Launch RStudio. Go to Tools — Global options.
 
 In General section:
 
@@ -95,13 +96,13 @@ Download [install_all.R](https://github.com/bdemeshev/coursera_metrics/raw/maste
 Open the file in RStudio (`File` --- `Open file`). Run it by selecting `Code` --- `Source with Echo`.
 Internet connection is required for package installation.
 
-You may encounter question: "Do you want to install from sources the packages which need compilation?" 
+You may encounter question: "Do you want to install from sources the packages which need compilation?"
 
 ![](source_question.png)
 
-You should answer "No"! 
+You should answer "No"!
 
-Explanation: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты. 
+Explanation: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты.
 
 
 Appearing red messages do not signify an error, a sign of an error is the explicit word "Error".
@@ -142,7 +143,7 @@ In Sweave section:
 
 In Code - Diagnostics section:
 
-    * выставьте все галочки.
+    * check all boxes.
 
 ![](options_diagnostics.png)
 
@@ -162,13 +163,13 @@ This will force the use of english language.
 Откройте его в RStudio (`File` --- `Open file`). Запустите, выбрав `Code` --- `Source with Echo`.
 При этом требуется соединение с Интернетом.
 
-При установке может встретиться вопрос: "Do you want to install from sources the packages which need compilation?" 
+При установке может встретиться вопрос: "Do you want to install from sources the packages which need compilation?"
 
 ![](source_question.png)
 
-You should answer "No"! 
+You should answer "No"!
 
-Причина: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты. 
+Причина: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты.
 
 
 Appearing red messages do not signify an error, a sign of an error is the explicit word "Error".
