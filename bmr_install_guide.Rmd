@@ -1,0 +1,36 @@
+---
+title: "bmr_install_guide"
+date: "9/5/2019"
+output: pdf_document
+lang: ru-RU
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Инструкция: 
+1. Зайти на https://github.com/kthohr/BMR и на https://www.kthohr.com/bmr.html и посмтреть требования для установки (пакеты и версии). Установить или обновить то, что нужно.
+```{r eval = FALSE}
+install.packages("RcppArmadillo")
+install.packages("ggplot2")
+```
+2. Нативный компилятор C++ на macOS не подойдёт для этого пакета, необходимо установить и настроить другой. На https://stackoverflow.com/questions/43595457/ представлены разные варианты, как это сделать. Эта инструкция описывает процесс настройки llvm (это способ 2 по ссылке).
+3. Установить brew: https://brew.sh
+4. Установить llvm:
+```{r eval = FALSE}
+brew install llvm
+```
+5. Изменить файл ~/.R/Makevars так, чтобы он выглядел следующим образом:
+```{r eval = FALSE}
+CC=/usr/local/opt/llvm/bin/clang
+CXX=/usr/local/opt/llvm/bin/clang++
+# Also potentially CXX11 (for C++11 compiler)
+CXX11=/usr/local/opt/llvm/bin/clang++
+```
+6. Выйти из системы и зайти снова. 
+7. Далее установить bmr:
+```{r eval = FALSE}
+install.packages("devtools")
+library(devtools)
+install_github("kthohr/BMR")
+```
