@@ -9,5 +9,6 @@ lang: ru-RU
 * Вероятностное программирование на [stan / rstan](http://bdemeshev.github.io/installation/r_stan/r_stan_installation.html)
 * Дистрибутив теха [tinytex](http://bdemeshev.github.io/installation/tinytex/tinytex.html)
 * Текстовый редактор [neovim](http://bdemeshev.github.io/installation/neovim.html)
+* Установка пакета [BMR под macos](http://bdemeshev.github.io/bmr_install_guide.html): установка ненативного компилятора c++
 * Перевод [Rmd в ppts](http://bdemeshev.github.io/installation/rmd_pptx_template.html)
 * Хочешь [внести правки в сборники задач?](http://bdemeshev.github.io/installation/github_help.html)
