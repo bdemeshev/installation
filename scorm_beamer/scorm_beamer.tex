@@ -1,0 +1,116 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt]{beamer}
+
+
+\usepackage{xcolor} % для установки цвета
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Myriad Pro} % or Helvetica, Arial, Cambria
+\setsansfont{Myriad Pro}
+% \newfontfamily{\cyrillicfonttt}{Myriad Pro}
+% \newfontfamily{\cyrillicfont}{Myriad Pro}
+% \newfontfamily{\cyrillicfontsf}{Myriad Pro}
+
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+
+
+\setbeamersize{text margin left=6mm,text margin right=6mm} 
+
+\definecolor{hseblue}{RGB}{0,90,171}
+
+% ЗАГОЛОВОК СЛАЙДА 32 pt Bold
+% ЗАГОЛОВОК 24 pt Bold
+% Обычный текст 24 pt
+
+\setbeamercolor{frametitle}{fg=hseblue}
+\setbeamerfont{frametitle}{size={\fontsize{16}{8}},series=\bfseries} % \fontsize{font size}{skip line size}
+
+\setbeamercolor{alerted text}{fg=hseblue}
+\setbeamerfont{alerted text}{size={\fontsize{12}{8}},series=\normalfont}
+
+
+\setbeamertemplate{frametitle}
+{
+    \vspace{3mm}
+    \strut\insertframetitle\strut 
+    \hfill
+    \raisebox{-4mm}{\includegraphics[width=1cm]{logo_с_hse_cmyk.eps}}
+    \vspace{3mm}
+    {\color{hseblue}\rule{10.3cm}{0.25mm}}
+}
+
+
+\setbeamertemplate{title page}
+{
+    \vbox{}
+    % \vfill
+    \begingroup
+    \centering
+    
+    \begin{minipage}{.9\linewidth}
+    \begin{center}
+        \includegraphics[width=4cm]{logo_с_hse_cmyk.eps}
+    \end{center}
+    \end{minipage}
+
+    \begin{minipage}{.9\linewidth}
+    \color{hseblue}
+    \usebeamerfont{title}\textsc{\inserttitle}\par
+    \ifx\insertsubtitle\@empty%
+    \else%
+    \vskip0.25em%
+    {\usebeamerfont{subtitle}\insertsubtitle\par}%
+    \fi%
+    \vspace{1.7em}
+    \usebeamerfont{author}\insertauthor\par\vspace{.7em}
+    \usebeamerfont{date}\insertdate\par
+    \end{minipage}\par
+    \endgroup
+    \vfill
+    \thispagestyle{empty}
+}
+
+
+
+
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{footline}{%
+\hfill
+% \usebeamertemplate***{navigation symbols} % если захотим навигационные символы
+% \hspace{1cm}
+\insertframenumber{}/\inserttotalframenumber
+\vspace{1.7em}\hspace{5em}}
+
+
+
+\title{Пример}
+\subtitle{}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Мотивация}
+
+
+Неявный вывод из модели межвременного выбора: само наличие финансового рынка 
+(возможности сберегать и брать в долг) является Парето-улучшением
+
+
+Тестируем русский \alert{шрифт нужного} размера!
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Second Slide}
+Contents of the second slide
+\end{frame}
+\end{document}
