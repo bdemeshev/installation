@@ -46,6 +46,16 @@
 }
 
 
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{footline}{%
+\hfill
+% \usebeamertemplate***{navigation symbols} % если захотим навигационные символы
+% \hspace{1cm}
+{\fontsize{6}{7}\bfseries\selectfont \insertframenumber{}/\inserttotalframenumber}
+\hspace{0.5mm}
+\vspace{2mm}}
+
+
 \setbeamertemplate{title page}
 {
     \vbox{}
@@ -53,15 +63,18 @@
     \begingroup
     \centering
     
-    \begin{minipage}{.9\linewidth}
+    \begin{minipage}{\linewidth}
     \begin{center}
         \includegraphics[width=4cm]{logo_с_hse_cmyk.eps}
     \end{center}
     \end{minipage}
 
-    \begin{minipage}{.9\linewidth}
+    \vspace{1.5cm}
+    \begin{minipage}{\linewidth}
     \color{hseblue}
-    \usebeamerfont{title}\textsc{\inserttitle}\par
+    \begin{center}
+    \usebeamerfont{title}\textbf{\inserttitle}\par
+    \end{center}
     \ifx\insertsubtitle\@empty%
     \else%
     \vskip0.25em%
@@ -72,29 +85,28 @@
     \usebeamerfont{date}\insertdate\par
     \end{minipage}\par
     \endgroup
-    \vfill
+    % \vfill
     \thispagestyle{empty}
 }
 
 
 
 
-\setbeamertemplate{sidebar right}{}
-\setbeamertemplate{footline}{%
-\hfill
-% \usebeamertemplate***{navigation symbols} % если захотим навигационные символы
-% \hspace{1cm}
-\insertframenumber{}/\inserttotalframenumber
-\vspace{1.7em}\hspace{5em}}
 
 
 
-\title{Пример}
+\title{Финансовая система}
 \subtitle{}
 \author{}
 \date{}
 \begin{document}
-\maketitle
+
+
+\begingroup
+\setbeamertemplate{navigation symbols}{}
+% \maketitle
+\frame[plain]{\titlepage}
+\endgroup
 
 \begin{frame}
 \frametitle{Мотивация}
@@ -106,6 +118,9 @@
 
 Тестируем русский \alert{шрифт нужного} размера!
 
+\[
+x^2 + \cos x = 16    
+\]
 
 \end{frame}
 
