@@ -5,13 +5,16 @@ output: html_document
 lang: ru-RU
 ---
 
-Вышкинская студия OneButton (и не только она) требует pptx-слайды.
+Вышкинская студия OneButton (и не только она) требует pptx-слайды определённого дизайна :)
+
+## Решение 1. Из Rmd делаем pptx.
 
 1. Качаем [pptx-шаблон](https://github.com/bdemeshev/installation/raw/master/rmd_pptx_hse_template/scorm_hse_template_alpha.pptx).
 2. Качаем [Rmd-демку](https://github.com/bdemeshev/installation/raw/master/rmd_pptx_hse_template/pptx_slides_scorm_hse_demo.Rmd).
 3. Профит!
 
 Можно также установить пакет `azbuka`:
+
 ```r
 devtools::install_github("bdemeshev/azbuka")
 ```
@@ -25,3 +28,12 @@ devtools::install_github("bdemeshev/azbuka")
 Кликаем правой кнопкой мыши на повреждённом логотипе и выбираем "вырезать", при этом вырезается наложенная поверх картинка, и логотип как новенький :)
 
 Б. Не работает конвертация систем уравнений. Пока что не лечится.
+
+
+## Решение 2. Настраиваем beamer!
+
+1. Качаем [`.tex`](https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.tex) и вышкинское [лого](https://github.com/bdemeshev/installation/raw/master/scorm_beamer/logo_%D1%81_hse_cmyk.eps).
+
+2. Работаем в техе :)
+
+3. Получается pdf, похожий на [генерального прокура!](https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.pdf)

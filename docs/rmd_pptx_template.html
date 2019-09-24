@@ -254,9 +254,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -287,8 +285,6 @@ summary {
 </style>
 
 
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
 
@@ -363,18 +359,29 @@ $(document).ready(function () {
 
 
 
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
 
 <div class="fluid-row" id="header">
 
 
 
 <h1 class="title toc-ignore">Rmd в pptx</h1>
-<h4 class="date"><em>05.02.2019</em></h4>
+<h4 class="date">24.09.2019</h4>
 
 </div>
 
 
-<p>Вышкинская студия OneButton (и не только она) требует pptx-слайды.</p>
+<p>Вышкинская студия OneButton (и не только она) требует pptx-слайды определённого дизайна :)</p>
+<div id="-1.--rmd--pptx." class="section level2">
+<h2>Решение 1. Из Rmd делаем pptx.</h2>
 <ol style="list-style-type: decimal">
 <li>Качаем <a href="https://github.com/bdemeshev/installation/raw/master/rmd_pptx_hse_template/scorm_hse_template_alpha.pptx">pptx-шаблон</a>.</li>
 <li>Качаем <a href="https://github.com/bdemeshev/installation/raw/master/rmd_pptx_hse_template/pptx_slides_scorm_hse_demo.Rmd">Rmd-демку</a>.</li>
@@ -386,6 +393,15 @@ $(document).ready(function () {
 <p>Известные косяки:</p>
 <p>А. На логотипы вшэ накладывается картинка со слайда. Пока что лечится ручной пост-обработкой. Кликаем правой кнопкой мыши на повреждённом логотипе и выбираем “вырезать”, при этом вырезается наложенная поверх картинка, и логотип как новенький :)</p>
 <p>Б. Не работает конвертация систем уравнений. Пока что не лечится.</p>
+</div>
+<div id="-2.--beamer" class="section level2">
+<h2>Решение 2. Настраиваем beamer!</h2>
+<ol style="list-style-type: decimal">
+<li><p>Качаем <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.tex"><code>.tex</code></a> и вышкинское <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/logo_%D1%81_hse_cmyk.eps">лого</a>.</p></li>
+<li><p>Работаем в техе :)</p></li>
+<li><p>Получается pdf, похожий на <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.pdf">генерального прокура!</a></p></li>
+</ol>
+</div>
 
 
 
