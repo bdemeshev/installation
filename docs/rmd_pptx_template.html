@@ -400,7 +400,13 @@ $(document).ready(function () {
 <li><p>Качаем <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.tex"><code>.tex</code></a> и вышкинское <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/logo_%D1%81_hse_cmyk.eps">лого</a>.</p></li>
 <li><p>Работаем в техе :)</p></li>
 <li><p>Получается pdf, похожий на <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.pdf">генерального прокура!</a></p></li>
+<li><p>Если для студии нужны png послайдово:</p></li>
 </ol>
+<pre class="bash"><code>convert -density 300 -quality 85 *file name*.pdf *file name*.png</code></pre>
+<p>Если команда выдает <code>not authorized</code>, то нужно разрешить чтение <code>.pdf</code>-файлов в <a href="https://askubuntu.com/questions/1081895/">политике ImageMagick</a>. Достаточно отредактировать <code>/etc/ImageMagick-6/policy.xml</code>, а именно, заменить строку</p>
+<pre class="bash"><code>&lt;policy domain=&quot;coder&quot; rights=&quot;none&quot; pattern=&quot;PDF&quot; /&gt;</code></pre>
+<p>на</p>
+<pre class="bash"><code>&lt;policy domain=&quot;coder&quot; rights=&quot;read|write&quot; pattern=&quot;PDF&quot; /&gt;</code></pre>
 </div>
 
 

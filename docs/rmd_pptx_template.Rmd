@@ -37,3 +37,22 @@ devtools::install_github("bdemeshev/azbuka")
 2. Работаем в техе :)
 
 3. Получается pdf, похожий на [генерального прокура!](https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.pdf)
+
+4. Если для студии нужны png послайдово:
+
+```bash
+convert -density 300 -quality 85 *file name*.pdf *file name*.png
+```
+
+Если команда выдает `not authorized`, то нужно разрешить чтение `.pdf`-файлов в [политике ImageMagick](https://askubuntu.com/questions/1081895/). 
+Достаточно отредактировать `/etc/ImageMagick-6/policy.xml`, а именно, заменить строку
+
+```bash
+<policy domain="coder" rights="none" pattern="PDF" />
+```
+
+на
+
+```bash
+<policy domain="coder" rights="read|write" pattern="PDF" />
+```
