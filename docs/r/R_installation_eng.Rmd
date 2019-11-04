@@ -12,17 +12,20 @@ editor_options:
 
 # Step by step installation instructions for windows
 
-1. Если Windows только-только поставлена, то, пожалуйста,
-создайте пользователя с логином английскими буквами и работайте из под него.
+1. If you have fresh windows installation then please create a new user with 
+login name without national characters. For example, user name "Mashenka" is ok, 
+but "Машенька" is not ok.
+Username without national characters will greatly simplify your life afterwards. 
 
-Например, имя пользователя "Mashenka" подходит, а "Машенька" не подходит.
-Английское имя сильно облегчит жизнь в дальнейшем :)
-Проблема в том, что при взаимодействии Rstudio - R могут возникать проблемы,
-если в названии папки есть русские буквы, а у "Машеньки" путь к документам выглядит как "C:/Users/Машенька/".
+With national characters in username there might be some problems in interaction between R and Rstudio.
+The root of the problem is the home folder name. For user "Машеньки" the path will be "C:/Users/Машенька/".
 
-Если компьютер давно используется с логином русскими буквами ("Машенька"), то оставляйте как есть, но:
+If you use your windows for a long period of time and you would like to keep the username with national characters
+then follow details of this guide :)
 
-    При установке внимательно следите, что все программы ставятся в папки не содержащие русских букв. Мы рекомендуем поставить R в папку `C:/R`, а Rstudio в папку `C:/Rstudio`.
+
+    During installation process double check that R and Rstudio are installed into folders without national characters. 
+    We recommend to install R into `C:/R`, and Rstudio into `C:/Rstudio`.
 
 2. Disable antivirus temporary for the setup procedure.
 
@@ -31,10 +34,12 @@ Just we have encountered some problems during installation if anti-virus is acti
 
 3. Install classic R for [windows](https://cran.r-project.org/bin/windows/base/).
 
+<!--
 Тем, кто уже знаком с R и **не боится повозиться самостоятельно**, мы советуем попробовать вместо классического R поставить MRO, [Microsoft R Open](https://mran.microsoft.com/open/).
 Это другой дистрибутив R, оптимизированный под работу с 64-битными процессорами.
 Всё полностью идентично, кроме двух нюансов: во-первых, MRO немного быстрее,
 во-вторых, MRO ставит все пакеты на единую дату, выбираемую пользователем, а классический R ставит самые свежие версии пакетов.
+-->
 
 4. Install [RStudio](https://www.rstudio.com/products/rstudio/download/#download).
 
@@ -68,20 +73,21 @@ In Code - Diagnostics section:
 
 These are additional tools, that allow us, for example, to create excel files from R.
 
-7. Шаг только для windows. Если имя пользователя windows набрано русскими буквами, а создавать нового никак не хочется!
+7. If the username contains national letters
 
-7.1. Создайте папку для установки пакетов без русских букв и пробелов, например, `C:/Rlib`.
+7.1. Create special folder to store R pacakges, for example `C:/Rlib`. Avoid spaces and national letters!
 
-7.2. Выполните в консоли Rstudio команду
+7.2. In Rstudio console do
+
 ```{r, eval=FALSE}
 system("setx R_LIBS C:/Rlib")
 ```
 
-Вместо `C:/Rlib` должно быть имя папки созданной для установки пакетов.
+You may replace `C:/Rlib` at your wish prodived you use no spaces nor national letters.
 
 7.3. Relaunch Rstudio
 
-7.4. Проверьте, что R знает, куда ему ставить пакеты. Для этого выполните в консоли Rstudio команду
+7.4. Check that R knows the location to store package. Inside Rstudio console do
 
 ```{r, eval=FALSE}
 .libPaths()
@@ -93,7 +99,7 @@ It should point to `C:/Rlib`. Now all R packages will install into `C:/Rlib`.
 8. Install all required R packages for the course.
 
 Download [install_all.R](https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R).
-Open the file in RStudio (`File` --- `Open file`). Run it by selecting `Code` --- `Source with Echo`.
+Open the file in RStudio (`File` — `Open file`). Run it by selecting `Code` — `Source with Echo`.
 Internet connection is required for package installation.
 
 You may encounter question: "Do you want to install from sources the packages which need compilation?"
@@ -102,8 +108,9 @@ You may encounter question: "Do you want to install from sources the packages wh
 
 You should answer "No"!
 
-Explanation: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты.
-
+Explanation: some packages require a working copy of C++ on your computer to install packages from source.
+Without C++ on your computer installation from source will fail. 
+If your answer "No" precompiled packages will be installed.
 
 Appearing red messages do not signify an error, a sign of an error is the explicit word "Error".
 
@@ -114,20 +121,23 @@ Appearing red messages do not signify an error, a sign of an error is the explic
 
 1. Install classic R for [macos](https://cran.r-project.org/bin/macosx/).
 
+<!--
 Тем, кто уже знаком с R и **не боится повозиться самостоятельно**, мы советуем попробовать вместо классического R поставить MRO, [Microsoft R Open](https://mran.microsoft.com/open/).
 Это другой дистрибутив R, оптимизированный под работу с 64-битными процессорами.
 Всё полностью идентично, кроме двух нюансов: во-первых, MRO немного быстрее,
 во-вторых, MRO ставит все пакеты на единую дату, выбираемую пользователем, а классический R ставит самые свежие версии пакетов.
+-->
 
 2. Install [RStudio](https://www.rstudio.com/products/rstudio/download/#download).
 
-Rstudio — это всего лишь удобная красивая графическая оболочка к R.
-Суровые брутальные программисты могут вполне обойтись и без Rstudio :)
-Не спутайте Rstudio с R-studio, платной программой для восстановления данных.
+
+Rstudio — is just a pretty graphical interface to R.
+Brutal programmers may avoid Rstudio and use neovim or emacs :)
+Do not confuse Rstudio and R-studio, which is a non-free program for data recovery.
 
 3. Configure Rstudio.
 
-Launch RStudio. Go to Tools --- Global options.
+Launch RStudio. Go to Tools — Global options.
 
 In General section:
 
@@ -159,25 +169,85 @@ This will force the use of english language.
 
 
 
-Скачайте файл [install_all.R](https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R).
-Откройте его в RStudio (`File` --- `Open file`). Запустите, выбрав `Code` --- `Source with Echo`.
-При этом требуется соединение с Интернетом.
+Download [install_all.R](https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R).
+Open the file in RStudio (`File` — `Open file`). Run it by selecting `Code` — `Source with Echo`.
+Internet connection is required for package installation.
 
-При установке может встретиться вопрос: "Do you want to install from sources the packages which need compilation?"
+You may encounter question: "Do you want to install from sources the packages which need compilation?"
 
 ![](source_question.png)
 
 You should answer "No"!
 
-Причина: некоторые пакеты содержат код C++ и для установки из исходников (source) требуют наличия и корректной настройки компилятора C++ на компьютере. При ответе "Нет" будут скачаны уже заранее скомпилированые пакеты.
-
+Explanation: some packages require a working copy of C++ on your computer to install packages from source.
+Without C++ on your computer installation from source will fail. 
+If your answer "No" precompiled packages will be installed.
 
 Appearing red messages do not signify an error, a sign of an error is the explicit word "Error".
 
+# Пошаговая установка R для linux (на примере Ubuntu)
+
+1. Добавьте официальный репозиторий R:
+
+```{bash, eval=FALSE}
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+sudo apt update
+```
+
+Вместо `bionic` (для 18.04) должно быть кодовое название версии Ubuntu (disco для 19.04)
+
+2. Установите классический R:
+```{bash, eval=FALSE}
+sudo apt-get install r-base r-base-dev
+```
+
+3. Установите [RStudio](https://www.rstudio.com/products/rstudio/download/#download).
+
+Rstudio — это всего лишь удобная красивая графическая оболочка к R.
+Суровые брутальные программисты могут вполне обойтись и без Rstudio :)
+Не спутайте Rstudio с R-studio, платной программой для восстановления данных.
+
+4. Настройте Rstudio. 
+
+Запустите RStudio. Зайдите в раздел Tools — Global options.
+
+В разделе General:
+
+    * уберите галочку у Restore .Rdata into workspace in startup.
+    * выберите `Never` у Save workspace to .Rdata on exit
+
+![](options_general.png)
+
+В разделе Sweave:
+
+    * "Weave .Rnw files using" выберите knitr.
+![](options_sweave.png)
+
+В разделе Code - Diagnostics:
+
+    * выставьте все галочки.
+
+![](options_diagnostics.png)
 
 
-# Some comments for linux
+5. Для пакетов R, скачивающих данные из Интернета, может потребоваться установка дополнительных библиотек linux
 
-1. Under ubuntu Rstudio learns PATH value form the file `etc/environ`.
-If PATH variable in this variable does not contain path to latex binary, Rstudio will not discover latex.
-It is sufficient to add latex path in this file :)
+```{bash, eval=FALSE}
+sudo apt-get install libcurl4-openssl-dev libxml2-dev libssl-dev
+```
+
+6. Установите все необходимые для курса пакеты R.
+
+Скачайте файл [install_all.R](https://github.com/bdemeshev/coursera_metrics/raw/master/install_all.R).
+Откройте его в RStudio (`File` — `Open file`). Запустите, выбрав `Code` — `Source with Echo`.
+При этом требуется соединение с Интернетом.
+
+Бегущие красные надписи не означают ошибок, признаком ошибки является только явное сообщение Error.
+
+
+### Примечания:
+
+1. На ubuntu Rstudio узнает содержимое переменной PATH из файла `etc/environ`.
+Поэтому если в этом файле в переменной PATH нет пути к латеху, то Rstudio не увидит латех.
+Достаточно добавить путь к латеху в этом файле :)
