@@ -6,4 +6,7 @@
 *.synctex.gz
 *.toc
 *.pptx#
+*.fdb_latexmk
+*.xdv
+*.fls
 
