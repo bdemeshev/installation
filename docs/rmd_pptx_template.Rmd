@@ -56,3 +56,28 @@ convert -density 300 -quality 85 *file name*.pdf *file name*.png
 ```bash
 <policy domain="coder" rights="read|write" pattern="PDF" />
 ```
+
+
+## Overleaf и шрифт Myriad Pro
+
+Для использования шрифта Myriad Pro в техе есть два варианта. 
+Установить шрифт в систему, а далее использовать xelatex и в преамбуле вставить
+
+```tex
+\setmainfont{Myriad Pro} 
+\setsansfont{Myriad Pro}
+```
+
+Однако иногда хочется быть уверенным, что документ скомпилируется на компе, где шрифт не установлен.
+Например, в overleaf. Тогда делаем так:
+
+Копируем ttf-файлы в ту же папку, что и tex-документ. И в преамбуле ставим:
+
+```tex
+\setmainfont[
+BoldFont=MYRIADPRO-BLACK.TTF,
+ItalicFont=MYRIADPRO-CONDIT.TTF,
+BoldItalicFont=MYRIADPRO-BOLDIT.TTF
+]{MYRIADPRO-REGULAR.TTF}
+\setsansfont{Myriad Pro}
+```

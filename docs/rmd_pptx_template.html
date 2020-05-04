@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU" xml:lang="ru-RU">
+<html lang="ru-RU" xml:lang="ru-RU">
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -268,7 +268,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -330,6 +329,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -341,18 +341,6 @@ summary {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -374,13 +362,13 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Rmd в pptx</h1>
-<h4 class="date">24.09.2019</h4>
+<h4 class="date">04.05.2020</h4>
 
 </div>
 
 
 <p>Вышкинская студия OneButton (и не только она) требует pptx-слайды определённого дизайна :)</p>
-<div id="-1.--rmd--pptx." class="section level2">
+<div id="решение-1.-из-rmd-делаем-pptx." class="section level2">
 <h2>Решение 1. Из Rmd делаем pptx.</h2>
 <ol style="list-style-type: decimal">
 <li>Качаем <a href="https://github.com/bdemeshev/installation/raw/master/rmd_pptx_hse_template/scorm_hse_template_alpha.pptx">pptx-шаблон</a>.</li>
@@ -394,7 +382,7 @@ $(document).ready(function () {
 <p>А. На логотипы вшэ накладывается картинка со слайда. Пока что лечится ручной пост-обработкой. Кликаем правой кнопкой мыши на повреждённом логотипе и выбираем “вырезать”, при этом вырезается наложенная поверх картинка, и логотип как новенький :)</p>
 <p>Б. Не работает конвертация систем уравнений. Пока что не лечится.</p>
 </div>
-<div id="-2.--beamer" class="section level2">
+<div id="решение-2.-настраиваем-beamer" class="section level2">
 <h2>Решение 2. Настраиваем beamer!</h2>
 <ol style="list-style-type: decimal">
 <li><p>Качаем <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/scorm_beamer.tex"><code>.tex</code></a> и вышкинское <a href="https://github.com/bdemeshev/installation/raw/master/scorm_beamer/logo_%D1%81_hse_cmyk.eps">лого</a>.</p></li>
@@ -407,6 +395,20 @@ $(document).ready(function () {
 <pre class="bash"><code>&lt;policy domain=&quot;coder&quot; rights=&quot;none&quot; pattern=&quot;PDF&quot; /&gt;</code></pre>
 <p>на</p>
 <pre class="bash"><code>&lt;policy domain=&quot;coder&quot; rights=&quot;read|write&quot; pattern=&quot;PDF&quot; /&gt;</code></pre>
+</div>
+<div id="overleaf-и-шрифт-myriad-pro" class="section level2">
+<h2>Overleaf и шрифт Myriad Pro</h2>
+<p>Для использования шрифта Myriad Pro в техе есть два варианта. Установить шрифт в систему, а далее использовать xelatex и в преамбуле вставить</p>
+<pre class="tex"><code>\setmainfont{Myriad Pro} 
+\setsansfont{Myriad Pro}</code></pre>
+<p>Однако иногда хочется быть уверенным, что документ скомпилируется на компе, где шрифт не установлен. Например, в overleaf. Тогда делаем так:</p>
+<p>Копируем ttf-файлы в ту же папку, что и tex-документ. И в преамбуле ставим:</p>
+<pre class="tex"><code>\setmainfont[
+BoldFont=MYRIADPRO-BLACK.TTF,
+ItalicFont=MYRIADPRO-CONDIT.TTF,
+BoldItalicFont=MYRIADPRO-BOLDIT.TTF
+]{MYRIADPRO-REGULAR.TTF}
+\setsansfont{Myriad Pro}</code></pre>
 </div>
 
 
@@ -426,6 +428,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
